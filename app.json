@@ -3,6 +3,9 @@
     "name": "CazaInsectos",
     "slug": "CazaInsectos",
     "version": "1.0.0",
+    "extra": {
+      "EXPO_ROUTER_DISABLE_RN_NAVIGATION_CHECK": "1"
+    },
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "cazainsectos",
@@ -24,7 +27,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
+      
       [
         "expo-splash-screen",
         {
@@ -33,6 +36,7 @@
           "imageWidth": 76
         }
       ]
+      
     ],
     "experiments": {
       "typedRoutes": true,
