@@ -41,7 +41,15 @@ export default function LoginScreen({ navigation }: Props) {
       }
 
       console.log("Datos del usuario:", { nombre, correo, edad, image });
-      navigation.navigate('MainTabs');
+      
+      
+      navigation.navigate('MainTabs', { 
+        nombre: nombre || 'Jugador', 
+        correo: correo, 
+        edad: edad, 
+        image: image 
+      });
+
     } catch (error: any) {
       Alert.alert("Error de autenticación", "Ocurrió un error inesperado. Verifica tus datos.");
     }

@@ -9,11 +9,23 @@ import ScoreScreen from './src/screens/ScoreScreen';
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function MainTabs() {
+function MainTabs({ route }) {
+  
+  const userData = route.params || {};
+
   return (
     <Tab.Navigator>
-      <Tab.Screen name="Juego" component={GameScreen} />
-      <Tab.Screen name="Puntuaciones" component={ScoreScreen} />
+     
+      <Tab.Screen 
+        name="Juego" 
+        component={GameScreen} 
+        initialParams={userData} 
+      />
+      <Tab.Screen 
+        name="Puntuaciones" 
+        component={ScoreScreen} 
+        initialParams={userData} 
+      />
     </Tab.Navigator>
   );
 }
